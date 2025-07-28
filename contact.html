@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="nav-link">About Me</a>
+    <a href="project.html" class="nav-link">Projects</a>
+    <a href="contact.html" class="nav-link active">Contact Me</a>
+  </nav>
+</header>
+
+<main>
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <form id="contactForm" autocomplete="off" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" required placeholder="Your full name" aria-required="true" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required placeholder="Your email address" aria-required="true" />
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" required placeholder="Write your message here" aria-required="true"></textarea>
+
+      <button type="submit">Send Message</button>
+      <p id="formStatus" role="alert" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section id="admin" class="fade-in">
+    <h3>Admin Login</h3>
+    <form id="adminLoginForm" autocomplete="off" novalidate>
+      <label for="adminPassword">Password:</label>
+      <input type="password" id="adminPassword" required aria-required="true" />
+      <button type="submit">Login</button>
+    </form>
+
+    <details id="responsesSection" style="display:none;">
+      <summary>User Responses (<span id="responseCount">0</span>)</summary>
+      <div id="responses"></div>
+    </details>
+    <button id="logoutBtn" style="margin-top: 15px; background:#c0392b; display:none;">Logout</button>
+  </section>
+</main>
+
+<button id="themeToggle" title="Toggle Light/Dark Theme" aria-label="Toggle theme">🌙</button>
+<button id="scrollTopBtn" title="Scroll to top" aria-label="Scroll to top">⬆️</button>
+
+<script src="demo.js"></script>
+
+</body>
+</html>
